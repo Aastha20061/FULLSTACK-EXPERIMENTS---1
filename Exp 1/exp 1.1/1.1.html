@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        h1 {
+            font-size: 45px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        input {
+            width: 350px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+        button {
+            margin-top: 25px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student Registration</h1>
+
+<form>
+    <!-- Full Name -->
+    <label for="name">Full Name:</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        pattern="[A-Za-z ]{9,50}"
+        title="Must contain 9–50 letters only"
+        placeholder="Enter full name">
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        title="Enter a valid email address"
+        placeholder="example@email.com">
+
+    <!-- Age -->
+    <label for="age">Age:</label>
+    <input
+        type="number"
+        id="age"
+        name="age"
+        required
+        min="16"
+        max="30"
+        title="Age must be between 16 and 30">
+
+    <br>
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
